@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <style>
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration:none;
+  list-style:none;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+body{
+  height:100vh;
+}
+.nav-container{
+  width: 100%;
+  background-color: orangered;
+}
+.navbar{
+  display: grid;
+  grid-template-columns: 0.2fr auto 1fr;
+  align-items: center;
+  height: 80px;
+  width:90%;
+  max-width: 1720px;
+  margin :0 auto;
+}
+#navbar-logo{
+justify-self: start;
+margin-left: 15px ;
+}
+#navbar-logo{
+  cursor: pointer;
+}
+.nav-menu{
+  
+  display:grid;
+  grid-template-columns: repeat(5,auto);
+  list-style: none;
+  text-align: center;
+  width:70%;
+  justify-self: end;
+}
+.nav-links{
+  color: black;
+text-decoration: none;
+}
+.nav-links:hover{
+  color: white ;
+  transition:  all  0.2 ease-out;
+  text-decoration: none;
+}
+.nav-links-btn{
+  background-color:black ;
+  color: orangered;
+  padding:  6px 16px;
+  border-radius: 4px;
+}
+.nav-links-btn:hover{
+  background-color: transparent;
+  color:white;
+  padding:5px 15px;
+  border-radius: 4px;
+  border:solid 1px wheat;
+  transition:all 0.3s ease;
+}
+.menu-toggle .bar{
+  width:25px;
+  height: 3px;
+  margin:5px auto;
+transition: all 0.3s ease-in-out;
+background-color: black;
+}
+@media(max-width:800px){
+  .nav-container{
+      position: relative;
+  }
+  .nav-menu{
+      display: grid;
+      grid-template-columns: auto;
+      background: rgb(255, 252, 250) ;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top:80px;
+      left:-100px;
+      opacity:0;
+      transition: all 0.5s ease;
+  }
+  #navbar-logo{
+      margin-left:20px;
+  }
+  .nav-menu.active{
+      background: grey;
+      left:0;
+      opacity:1;
+      transition: all 0.5 ease;
+      z-index: 3;
+  }
+.nav-links{
+  text-align:center;
+  line-height: 60px;
+  width: 100%;
+  display: table;
+
+}
+.nav-links:hover{
+  background-color: orangered;
+  color:white;
+  transition: all 0.4s ease-out;
+}
+.navbar{
+  width:100%;
+}
+.nav-links-btn{
+border:none;
+padding: 15px 5px;
+border-radius: 0;
+background-color: orangered;
+color:rgb(0, 0, 0);
+transition: all 0.4s ease-out;
+}
+.nav-links-btn:hover{
+  border:none;
+  padding: 15px 5px;
+  border-radius: 0;
+background-color: orangered ; 
+transition: all 0.4s ease-out;
+}
+#mobile-menu{
+  position:absolute;
+  top:20%;
+  right:5%;
+  transform: translate(5%,20%);
+
+}
+.menu-toggle .bar{
+  display: block;
+  cursor: pointer;
+}
+.menu-toggle:hover{
+  cursor: pointer;
+}
+#mobile-menu.is-active .bar:nth-child(2){
+  opacity: 0;
+}
+#mobile-menu.is-active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+
+}
+#mobile-menu.is-active .bar:nth-child(3){
+  transform : translateY(-8px) rotate(-45deg);
+
+}
+
+}
+.list-group{
+ margin-top: 30px;
+ z-index: 2;
+}
+.list-group-item{
+  background-color: gray;
+  color: black;
+}
+.list-group-item a{
+  text-decoration: none;
+  color: black;
+}
+.list-group-item a:hover{
+  color: aliceblue;
+}
+form i{
+ color:black;
+}
+form i:hover{
+ color:white;
+}
+.btn{
+  color: black;
+}
+    </style>
+    <div class="container">
+      <div class="nav-container">
+        <nav class="navbar">
+        <img src="C:\Users\Ayat\Desktop\training 1\assets\images\logo.png" id="navbar-logo" width="50px " height="50px">
+        <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-links"><b>Home</b></a></li>
+            <li><a href="news.html" class="nav-links"><b>News</b></a></li>
+            <li><a href="about.html" class="nav-links"><b>About us</b></a></li>
+            <li><a href="contact.html" class="nav-links"><b>Contact us</b></a></li>
+            <li><a href="#" class="nav-links nav-links-btn fa fa-search "><b>search</b></a></li>
+        </ul>
+        </nav></div>
+        <ul class="list-group">
+          <li class="list-group-item"><b>Email : <a href="#"> training@gmail.com.lb</a></b></li>
+          <li class="list-group-item"><b>Phone Number :<a href="#">96112345678</a></b></li>
+          <li class="list-group-item"><b>Fax Number :<a href="#">9611234567</a></b></li>
+        </ul><br>
+
+        <p><b>You can also contact us by filling out the following form, and we will respond to you as soon as possible:</b></p>
+        <form >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <div class="col-md-6 inputGroupContainer">
+            <div class="input-group">
+              <button class=" btn btn-secondary input-group-addon"><i class="fa fa-id-card-o"></i></button>
+            <input type="text" class="form-control" id="uname" placeholder="Please enter name" name="name">
+          </div>
+          </div></div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <div class="col-md-6 inputGroupContainer">
+            <div class="input-group">
+              <button class=" btn btn-secondary input-group-addon"><i class="fa fa-envelope"></i></button>
+            <input type="text" class="form-control" id="email" placeholder="Please enter your email" name="email">
+          </div>
+          </div></div>
+          <div class="form-group">
+            <label for="Country">Country:</label>
+            <div class="col-md-6 inputGroupContainer">
+            <div class="input-group">
+              <button class=" btn btn-secondary input-group-addon"><i class="fa fa-globe"></i></button>
+            <select name="country" class="form-control selectpicker" required=""><option value=" ">Please select a country</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Aland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia</option>
+              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="CV">Cape Verde</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">Congo</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="CI">Cote D'Ivoire</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curacao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and Mcdonald Islands</option>
+              <option value="VA">Holy See (Vatican City State)</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran, Islamic Republic of</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KP">Korea, Democratic People's Republic of</option>
+              <option value="KR">Korea, Republic of</option>
+              <option value="XK">Kosovo</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Lao People's Democratic Republic</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+            </select>
+          </div>
+          </div></div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Suggestion type</label>
+            <div class="col-md-4">
+              <div class="radio">
+                <label><input type="radio" name="type" value="1">Technical</label></div>
+              <div class="radio">
+                <label><input type="radio" name="type" value="2">Other</label></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <div class="col-md-6 inputGroupContainer">
+            <div class="input-group">
+              <button class=" btn btn-secondary input-group-addon"><i class="fa fa-pencil-square-o"></i></button>
+            <input type="text" class="form-control" id="title" placeholder="Please enter title" name="title">
+          </div>
+          </div></div>
+          <div class="form-group">
+          <label class="col-md-3 control-label"> Message</label>
+          <div class="col-md-6 inputGroupContainer">
+            <div class="input-group">
+              <button class=" btn btn-secondary input-group-addon"><i class="fa fa-commenting"></i></button>
+          <textarea class="form-control" name="content" placeholder="Please enter your message" required=""></textarea>
+        </div></div></div>
+        <div class="form-group return-area">
+        <label class="col-md-3" control-label></label>
+       <div class="col-md-3">
+        <button type="submit" class="btn btn-secondary"><i class="fa fa-paper-plane"></i>  Send</button>
+       </div> 
+      </div>
+        </form>
+        <br>
+        <br>
+      </div>
+        <script src="app.js"></script>
+</body>
+</html>
